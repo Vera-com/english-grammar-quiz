@@ -34,6 +34,10 @@ body {
   margin: 0 auto;
   padding: 1rem;
 }
+/* Space between sections for better readability */
+section {
+    margin-bottom: 2rem;
+}
 
 /* 
   Button styling for clarity and usability
