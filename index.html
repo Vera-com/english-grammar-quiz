@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive English grammar quiz designed to help intermediate learners test their grammar skills.">
+
+    <title>Interactive English Grammar Quiz</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <h1>Interactive English Grammar Quiz</h1>
+        <p>Test your intermediate-level English grammar skills.</p>
+    </header>
+
+    <main class="container">
+
+        <!-- Start Screen -->
+        <section id="start-screen">
+            <button id="start-btn">Start Quiz</button>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" hidden>
+            <p class="question">Question text will appear here</p>
+
+            <div class="answers">
+                <button class="answer-btn">Answer 1</button>
+                <button class="answer-btn">Answer 2</button>
+                <button class="answer-btn">Answer 3</button>
+                <button class="answer-btn">Answer 4</button>
+                <button class="answer-btn">Answer 5</button>
+                <button class="answer-btn">Answer 6</button>
+                <button class="answer-btn">Answer 7</button>
+                <button class="answer-btn">Answer 8</button>
+                <button class="answer-btn">Answer 9</button>
+                <button class="answer-btn">Answer 10</button>
+
+            </div>
+        </section>
+
+        <!-- Feedback Screen -->
+        <section id="feedback-screen" hidden>
+            <p id="feedback-message">Feedback will appear here</p>
+            <button id="next-btn">Next Question</button>
+        </section>
+
+        <!-- Result Screen -->
+        <section id="result-screen" hidden>
+            <p>Your final score will appear here</p>
+            <button id="restart-btn">Restart Quiz</button>
+        </section>
+
+    </main>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
