@@ -29,4 +29,11 @@ answerButtons.forEach((button) => {
     }
   });
 });
+// Next question button
+const nextBtn = document.getElementById("next-btn");
+
+nextBtn.addEventListener("click", () => {
+  feedbackScreen.hidden = true;
+  quizScreen.hidden = false;
+});
 
