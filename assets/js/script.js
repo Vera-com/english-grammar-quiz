@@ -8,3 +8,4 @@ startBtn.addEventListener("click", () => {
   startScreen.hidden = true;
   quizScreen.hidden = false;
 });
+
