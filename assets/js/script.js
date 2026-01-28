@@ -22,6 +22,7 @@ const questions = [
 ];
 //Load the current question and update the UI
 let currentQuestionIndex = 0;
+let score = 0;
 function loadQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
 
@@ -32,6 +33,8 @@ function loadQuestion() {
   answerButtons.forEach((button, index) => {
     button.textContent = currentQuestion.answers[index];
   });
+  //Reset buttons
+   answerButtons.forEach(btn => btn.disabled = false);
 }
 
 // Get elements
@@ -56,11 +59,13 @@ const correctAnswer = "She doesn't like coffee.";
 // Handle answer click
 answerButtons.forEach(button => {
   button.addEventListener("click", () => {
+    answerButtons.forEach(btn => btn.disabled = true);
     quizScreen.hidden = true;
     feedbackScreen.hidden = false;
 
     if (button.textContent === questions[currentQuestionIndex].correct) {
       feedbackMessage.textContent = "Correct! Well done 🎉";
+      score++;
     } else {
       feedbackMessage.textContent = "Not quite. Try again 🙂";
     }
@@ -72,14 +77,14 @@ const nextBtn = document.getElementById("next-btn");
 //Move to the next question or end the quiz
 nextBtn.addEventListener("click", () => {
   feedbackScreen.hidden = true;
-
   currentQuestionIndex++;
 
   if (currentQuestionIndex < questions.length) {
     quizScreen.hidden = false;
     loadQuestion();
   } else {
-    alert("Quiz complete 🎉");
+   alert(`Quiz complete 🎉 Your score: ${score}/${questions.length}`);
+
   }
 });
 
