@@ -41,6 +41,12 @@ function loadQuestion() {
 const startBtn = document.getElementById("start-btn");
 const startScreen = document.getElementById("start-screen");
 const quizScreen = document.getElementById("quiz-screen");
+// Get answer buttons and feedback elements
+const answerButtons = document.querySelectorAll(".answer-btn");
+const feedbackScreen = document.getElementById("feedback-screen");
+const feedbackMessage = document.getElementById("feedback-message");
+const restartBtn = document.getElementById("restart-btn");
+const resultScreen = document.getElementById("result-screen");
 
 // Start quiz
 startBtn.addEventListener("click", () => {
@@ -48,10 +54,7 @@ startBtn.addEventListener("click", () => {
   quizScreen.hidden = false;
   loadQuestion();
 });
-// Get answer buttons and feedback elements
-const answerButtons = document.querySelectorAll(".answer-btn");
-const feedbackScreen = document.getElementById("feedback-screen");
-const feedbackMessage = document.getElementById("feedback-message");
+
 
 // Correct answer text
 const correctAnswer = "She doesn't like coffee.";
@@ -83,9 +86,24 @@ nextBtn.addEventListener("click", () => {
     quizScreen.hidden = false;
     loadQuestion();
   } else {
-   alert(`Quiz complete 🎉 Your score: ${score}/${questions.length}`);
+  quizScreen.hidden = true;
+feedbackScreen.hidden = true;
+resultScreen.hidden = false;
 
-  }
+document.querySelector("#result-screen p").textContent =
+  `Quiz complete 🎉 Your score: ${score}/${questions.length}`;
+   
+}
+});
+
+restartBtn.addEventListener("click", () => {
+  currentQuestionIndex = 0;
+  score = 0;
+
+  restartBtn.hidden = true;
+  feedbackScreen.hidden = true;
+  quizScreen.hidden = true;
+  startScreen.hidden = false;
 });
 
 
