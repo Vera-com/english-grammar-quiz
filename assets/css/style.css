@@ -104,5 +104,27 @@ button:focus {
 .answer-btn.wrong {
   background-color: #f59e0b;
 }
+/*  Mobile responsiveness */
+@media (max-width: 480px) {
+  .container {
+    width: 92%;
+    padding: 1.2rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+
+  .answer-btn,
+  #start-btn,
+  #next-btn {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+}
 
 
