@@ -68,9 +68,12 @@ answerButtons.forEach(button => {
 
     if (button.textContent === questions[currentQuestionIndex].correct) {
       feedbackMessage.textContent = "Correct! Well done 🎉";
+     button.classList.add("correct");   // ✅ green
       score++;
     } else {
       feedbackMessage.textContent = "Not quite. Try again 🙂";
+      button.classList.add("wrong");     // ✅ yellow
+
     }
   });
 });
