@@ -34,7 +34,9 @@ function loadQuestion() {
     button.textContent = currentQuestion.answers[index];
   });
   //Reset buttons
-   answerButtons.forEach(btn => btn.disabled = false);
+   answerButtons.forEach(btn => {btn.disabled = false;
+   btn.classList.remove("correct","wrong");
+   });
 }
 
 // Get elements
