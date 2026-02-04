@@ -65,8 +65,6 @@ const correctAnswer = "She doesn't like coffee.";
 answerButtons.forEach(button => {
   button.addEventListener("click", () => {
     answerButtons.forEach(btn => btn.disabled = true);
-    quizScreen.hidden = true;
-    feedbackScreen.hidden = false;
 
     if (button.textContent === questions[currentQuestionIndex].correct) {
       feedbackMessage.textContent = "Correct! Well done 🎉";
@@ -102,13 +100,15 @@ document.querySelector("#result-screen p").textContent =
 });
 
 restartBtn.addEventListener("click", () => {
-  currentQuestionIndex = 0;
-  score = 0;
+    currentQuestionIndex = 0;
+    score = 0;
 
-  restartBtn.hidden = true;
-  feedbackScreen.hidden = true;
-  quizScreen.hidden = true;
-  startScreen.hidden = false;
+    resultScreen.hidden = true;   // hide results
+    feedbackScreen.hidden = true;  // hide feedback
+    quizScreen.hidden = false;     // show quiz
+
+    loadQuestion();                // load first question
 });
+
 
 
