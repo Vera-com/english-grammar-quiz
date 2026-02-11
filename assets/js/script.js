@@ -63,15 +63,26 @@ startBtn.addEventListener("click", () => {
 // Handle answer click
 answerButtons.forEach(button => {
   button.addEventListener("click", () => {
-   answerButtons.forEach(btn => btn.disabled = true);
-    if (button.textContent === questions[currentQuestionIndex].correct) {
+
+    answerButtons.forEach(btn => btn.disabled = true);
+
+    const correctAnswer = questions[currentQuestionIndex].correct;
+
+    if (button.textContent === correctAnswer) {
       feedbackMessage.textContent = "Correct! Well done 🎉";
-     button.classList.add("correct");   // ✅ green
       score++;
     } else {
-      feedbackMessage.textContent = "Not quite. Try again 🙂";
-      button.classList.add("wrong");     // ✅ yellow
+      feedbackMessage.textContent = "Not quite 🙂";
+      button.classList.add("wrong");
     }
+
+    // Always highlight the correct answer
+    answerButtons.forEach(btn => {
+      if (btn.textContent === correctAnswer) {
+        btn.classList.add("correct");
+      }
+    });
+
     nextBtn.hidden = false;
   });
 });

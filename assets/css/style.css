@@ -59,14 +59,14 @@ button {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  background-color: #22c55e; /* Modern green */
+  background-color: #2563eb; /* blue */
   color: #ffffff;
-  box-shadow: 0 6px 15px rgba(34, 197,94, 0.35);
+  box-shadow: 0 6px 15px rgba(37, 99, 235, 0.35);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 button:hover {
-  background-color: #16a34a; /* darker green  */
+  background-color: #1d4ed8; /* darker blue */
 }
 /* Keyboard focus for accessibility */
 button:focus {
