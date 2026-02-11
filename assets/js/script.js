@@ -37,6 +37,8 @@ function loadQuestion() {
    answerButtons.forEach(btn => {btn.disabled = false;
    btn.classList.remove("correct","wrong");
    });
+   nextBtn.hidden = true;
+   feedbackMessage.textContent ="";
 }
 
 // Get elements
@@ -45,10 +47,11 @@ const startScreen = document.getElementById("start-screen");
 const quizScreen = document.getElementById("quiz-screen");
 // Get answer buttons and feedback elements
 const answerButtons = document.querySelectorAll(".answer-btn");
-const feedbackScreen = document.getElementById("feedback-screen");
 const feedbackMessage = document.getElementById("feedback-message");
+const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const resultScreen = document.getElementById("result-screen");
+const resultMessage = document.getElementById("result-message");
 
 // Start quiz
 startBtn.addEventListener("click", () => {
@@ -57,15 +60,10 @@ startBtn.addEventListener("click", () => {
   loadQuestion();
 });
 
-
-// Correct answer text
-const correctAnswer = "She doesn't like coffee.";
-
 // Handle answer click
 answerButtons.forEach(button => {
   button.addEventListener("click", () => {
-    answerButtons.forEach(btn => btn.disabled = true);
-
+   answerButtons.forEach(btn => btn.disabled = true);
     if (button.textContent === questions[currentQuestionIndex].correct) {
       feedbackMessage.textContent = "Correct! Well done 🎉";
      button.classList.add("correct");   // ✅ green
@@ -73,16 +71,14 @@ answerButtons.forEach(button => {
     } else {
       feedbackMessage.textContent = "Not quite. Try again 🙂";
       button.classList.add("wrong");     // ✅ yellow
-
     }
+    nextBtn.hidden = false;
   });
 });
 
 // Next question button
-const nextBtn = document.getElementById("next-btn");
 //Move to the next question or end the quiz
 nextBtn.addEventListener("click", () => {
-  feedbackScreen.hidden = true;
   currentQuestionIndex++;
 
   if (currentQuestionIndex < questions.length) {
@@ -90,10 +86,9 @@ nextBtn.addEventListener("click", () => {
     loadQuestion();
   } else {
   quizScreen.hidden = true;
-feedbackScreen.hidden = true;
 resultScreen.hidden = false;
 
-document.querySelector("#result-screen p").textContent =
+resultMessage.textContent =
   `Quiz complete 🎉 Your score: ${score}/${questions.length}`;
    
 }
@@ -104,7 +99,6 @@ restartBtn.addEventListener("click", () => {
     score = 0;
 
     resultScreen.hidden = true;   // hide results
-    feedbackScreen.hidden = true;  // hide feedback
     quizScreen.hidden = false;     // show quiz
 
     loadQuestion();                // load first question
