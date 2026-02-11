@@ -106,7 +106,15 @@ button:focus {
   background-color: #f59e0b !important;
   color: black;
 }
-
+#feedback-message {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+#next-btn {
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.5rem;
+}
 /*  Mobile responsiveness */
 @media (max-width: 480px) {
   .container {
