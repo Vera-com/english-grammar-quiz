@@ -18,7 +18,89 @@ const questions = [
       "They is happy."
     ],
     correct: "They were happy."
-  }
+  },
+
+  {
+  question: "Choose the correct sentence:",
+  answers: [
+    "She has went home.",
+    "She has gone home.",
+    "She have gone home."
+  ],
+  correct: "She has gone home."
+},
+
+{
+  question: "Choose the correct sentence:",
+  answers: [
+    "I am living here since 2020.",
+    "I have lived here since 2020.",
+    "I live here since 2020."
+  ],
+  correct: "I have lived here since 2020."
+},
+
+{
+  question: "Choose the correct sentence:",
+  answers: [
+    "There is many problems.",
+    "There are many problems.",
+    "There was many problems."
+  ],
+  correct: "There are many problems."
+},
+
+{
+  question: "Choose the correct sentence:",
+  answers: [
+    "This is the most unique idea.",
+    "This is a more unique idea.",
+    "This is a unique idea."
+  ],
+  correct: "This is a unique idea."
+},
+
+{
+  question: "Choose the correct sentence:",
+  answers: [
+    "She suggested to go early.",
+    "She suggested going early.",
+    "She suggested go early."
+  ],
+  correct: "She suggested going early."
+},
+
+{
+  question: "Choose the correct sentence:",
+  answers: [
+    "I have seen her yesterday.",
+    "I saw her yesterday.",
+    "I have saw her yesterday."
+  ],
+  correct: "I saw her yesterday."
+},
+
+
+{
+  question: "Choose the correct sentence:",
+  answers: [
+    "If I will see him, I will tell him.",
+    "If I saw him, I would tell him.",
+    "If I see him, I would tell him."
+  ],
+  correct: "If I saw him, I would tell him."
+},
+
+{
+  question: "Choose the correct sentence:",
+  answers: [
+    "Neither of the students were ready.",
+    "Neither of the students was ready.",
+    "Neither of the students are ready."
+  ],
+  correct: "Neither of the students was ready."
+}
+
 ];
 //Load the current question and update the UI
 let currentQuestionIndex = 0;
@@ -87,7 +169,7 @@ answerButtons.forEach(button => {
         btn.classList.add("correct");
       }
     });
-    
+
  nextBtn.hidden = false;
 
   });
