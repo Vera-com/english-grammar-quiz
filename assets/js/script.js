@@ -196,15 +196,20 @@ nextBtn.addEventListener("click", () => {
   quizScreen.hidden = true;
 resultScreen.hidden = false;
 
+let percentage = (score / questions.length) * 100;
 let finalMessage = "";
 
-  if (score === questions.length) {
-    finalMessage = "🌟 Excellent work!";
-  } else if (score >= 1) {
-    finalMessage = "👍 Good attempt!";
-  } else {
-    finalMessage = "📚 Keep practicing!";
-  }
+if (percentage === 100) {
+  finalMessage = "🏆 Outstanding! Perfect score.";
+} else if (percentage >= 80) {
+  finalMessage = "🔥 Excellent performance!";
+} else if (percentage >= 60) {
+  finalMessage = "👍 Good job! You're getting strong.";
+} else if (percentage >= 40) {
+  finalMessage = "🙂 Fair attempt. Review a few topics.";
+} else {
+  finalMessage = "📚 Keep practicing-You’ll improve!";
+}
 
 resultMessage.textContent =
   `Quiz complete 🎉 Your score: ${score}/${questions.length} — ${finalMessage}`;
