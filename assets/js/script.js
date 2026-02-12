@@ -25,6 +25,9 @@ let currentQuestionIndex = 0;
 let score = 0;
 function loadQuestion() {
   const currentQuestion = questions[currentQuestionIndex];
+  progress.textContent = 
+  `Question ${currentQuestionIndex + 1} of ${questions.length}`;
+
 
   // Set question text
   document.querySelector(".question").textContent = currentQuestion.question;
@@ -52,6 +55,8 @@ const nextBtn = document.getElementById("next-btn");
 const restartBtn = document.getElementById("restart-btn");
 const resultScreen = document.getElementById("result-screen");
 const resultMessage = document.getElementById("result-message");
+const progress = document.getElementById("progress");
+
 
 // Start quiz
 startBtn.addEventListener("click", () => {
@@ -99,8 +104,18 @@ nextBtn.addEventListener("click", () => {
   quizScreen.hidden = true;
 resultScreen.hidden = false;
 
+let finalMessage = "";
+
+  if (score === questions.length) {
+    finalMessage = "🌟 Excellent work!";
+  } else if (score >= 1) {
+    finalMessage = "👍 Good attempt!";
+  } else {
+    finalMessage = "📚 Keep practicing!";
+  }
+
 resultMessage.textContent =
-  `Quiz complete 🎉 Your score: ${score}/${questions.length}`;
+  `Quiz complete 🎉 Your score: ${score}/${questions.length} — ${finalMessage}`;
    
 }
 });
