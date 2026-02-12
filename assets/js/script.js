@@ -87,8 +87,9 @@ answerButtons.forEach(button => {
         btn.classList.add("correct");
       }
     });
+    
+ nextBtn.hidden = false;
 
-    nextBtn.hidden = false;
   });
 });
 
