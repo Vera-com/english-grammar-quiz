@@ -21,13 +21,13 @@ const questions = [
   },
 
   {
-  question: "Choose the correct sentence:",
+  question: "If I had taken the job, I _____ in London now.",
   answers: [
-    "She has went home.",
-    "She has gone home.",
-    "She have gone home."
+    "would live",
+    "would have lived",
+    "will live"
   ],
-  correct: "She has gone home."
+  correct: "would live"
 },
 
 {
@@ -41,13 +41,13 @@ const questions = [
 },
 
 {
-  question: "Choose the correct sentence:",
+  question: "Rarely _____ such dedication from a student.",
   answers: [
-    "There is many problems.",
-    "There are many problems.",
-    "There was many problems."
+    "I have seen",
+    "have I seen",
+    "I saw"
   ],
-  correct: "There are many problems."
+  correct: "have I seen"
 },
 
 {
@@ -61,34 +61,33 @@ const questions = [
 },
 
 {
-  question: "Choose the correct sentence:",
+  question: "He hasn't replied yet. He _____ the message.",
   answers: [
-    "She suggested to go early.",
-    "She suggested going early.",
-    "She suggested go early."
+    "might not have seen",
+    "must not see",
+    "cannot see"
   ],
-  correct: "She suggested going early."
+  correct: "might not have seen"
 },
 
 {
-  question: "Choose the correct sentence:",
+  question: "Not only _____ late, but he also forgot the documents.",
   answers: [
-    "I have seen her yesterday.",
-    "I saw her yesterday.",
-    "I have saw her yesterday."
+    "he was",
+    "was he",
+    "he is"
   ],
-  correct: "I saw her yesterday."
+  correct: "was he"
 },
 
-
 {
-  question: "Choose the correct sentence:",
+  question: "If she had studied harder, she _____ the exam now.",
   answers: [
-    "If I will see him, I will tell him.",
-    "If I saw him, I would tell him.",
-    "If I see him, I would tell him."
+    "would pass",
+    "would have passed",
+    "will pass"
   ],
-  correct: "If I saw him, I would tell him."
+  correct: "would pass"
 },
 
 {
@@ -103,6 +102,12 @@ const questions = [
 
 ];
 //Load the current question and update the UI
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
 let currentQuestionIndex = 0;
 let score = 0;
 function loadQuestion() {
@@ -114,9 +119,12 @@ function loadQuestion() {
   // Set question text
   document.querySelector(".question").textContent = currentQuestion.question;
 
-  // Set answers
+  // Shuffle & Set answers
+  const shuffledAnswers = [...currentQuestion.answers];
+shuffleArray(shuffledAnswers);
+
   answerButtons.forEach((button, index) => {
-    button.textContent = currentQuestion.answers[index];
+    button.textContent = shuffledAnswers[index];
   });
   //Reset buttons
    answerButtons.forEach(btn => {btn.disabled = false;
@@ -142,6 +150,7 @@ const progress = document.getElementById("progress");
 
 // Start quiz
 startBtn.addEventListener("click", () => {
+  shuffleArray(questions); //shuffle questions
   startScreen.hidden = true;
   quizScreen.hidden = false;
   loadQuestion();
