@@ -8,7 +8,8 @@ const questions = [
       "She doesn't like coffee.",
       "She didn't likes coffee."
     ],
-    correct: "She doesn't like coffee."
+    correct: "She doesn't like coffee.",
+    explanation: "'Neither' is singular, so it takes a singular verb: 'was', not 'were'."
   },
   {
     question: "Choose the correct sentence:",
@@ -17,7 +18,8 @@ const questions = [
       "They were happy.",
       "They is happy."
     ],
-    correct: "They were happy."
+    correct: "They were happy.",
+    explanation: "With the subject 'they', we use 'were' in the past simple, not 'was' or 'is'."
   },
 
   {
@@ -27,7 +29,8 @@ const questions = [
     "would have lived",
     "will live"
   ],
-  correct: "would live"
+  correct: "would live",
+  explanation: "This is a mixed conditional: the 'if' clause refers to a past situation, but the result refers to the present."
 },
 
 {
@@ -37,7 +40,8 @@ const questions = [
     "I have lived here since 2020.",
     "I live here since 2020."
   ],
-  correct: "I have lived here since 2020."
+  correct: "I have lived here since 2020.",
+  explanation: "We use the present perfect with 'since' to describe an action that started in the past and continues now."
 },
 
 {
@@ -47,7 +51,9 @@ const questions = [
     "have I seen",
     "I saw"
   ],
-  correct: "have I seen"
+  correct: "have I seen",
+  explanation: "After negative adverbs like 'rarely', we invert the subject and auxiliary."
+
 },
 
 {
@@ -57,7 +63,8 @@ const questions = [
     "This is a more unique idea.",
     "This is a unique idea."
   ],
-  correct: "This is a unique idea."
+  correct: "This is a unique idea.",
+  explanation: "'Unique' is an absolute adjective, so we do not use 'more' or 'most' with it."
 },
 
 {
@@ -67,7 +74,8 @@ const questions = [
     "must not see",
     "cannot see"
   ],
-  correct: "might not have seen"
+  correct: "might not have seen",
+  explanation: "'Might not have' is used to make a guess about a past situation with uncertainty."
 },
 
 {
@@ -77,7 +85,8 @@ const questions = [
     "was he",
     "he is"
   ],
-  correct: "was he"
+  correct: "was he",
+  explanation: "After 'not only' at the beginning of a sentence, we use inversion with the auxiliary verb."
 },
 
 {
@@ -87,7 +96,8 @@ const questions = [
     "would have passed",
     "will pass"
   ],
-  correct: "would pass"
+  correct: "would pass",
+  explanation: "This is a mixed conditional: a past condition with a present result."
 },
 
 {
@@ -97,7 +107,8 @@ const questions = [
     "Neither of the students was ready.",
     "Neither of the students are ready."
   ],
-  correct: "Neither of the students was ready."
+  correct: "Neither of the students was ready.",
+  explanation: "'Neither' is singular, so it takes a singular verb: 'was', not 'were'."
 }
 
 ];
@@ -164,14 +175,15 @@ answerButtons.forEach(button => {
 
     const correctAnswer = questions[currentQuestionIndex].correct;
 
-    if (button.textContent === correctAnswer) {
-      feedbackMessage.textContent = "Correct! Well done 🎉";
-      score++;
-    } else {
-      feedbackMessage.textContent = "Not quite 🙂";
-      button.classList.add("wrong");
-    }
+    const explanation = questions[currentQuestionIndex].explanation;
 
+if (button.textContent === correctAnswer) {
+  score++;
+  feedbackMessage.textContent = `Correct! 🎉 ${explanation}`;
+} else {
+  feedbackMessage.textContent = `Not quite 🙂 ${explanation}`;
+  button.classList.add("wrong");
+}
     // Always highlight the correct answer
     answerButtons.forEach(btn => {
       if (btn.textContent === correctAnswer) {
