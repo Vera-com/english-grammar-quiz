@@ -107,16 +107,16 @@ Any issues identified were resolved and retested.
 ## Challenges Faced & Solutions
 
 ### Managing Quiz Flow and State
-One of the main challenges was managing the quiz flow, particularly ensuring that users could select only one answer per question and move smoothly to the next question. This was resolved by disabling the answer buttons after a selection and controlling screen visibility using JavaScript logic.
+One of the main challenges was managing the quiz flow, particularly ensuring that users could select only one answer per question and move smoothly to the next question. Initially, users were able to interact with multiple answers, which caused inconsistent behaviour. This was resolved by disabling the answer buttons after a selection and controlling screen visibility using JavaScript logic.
 
 ### Answer Randomisation
-Randomising answer options initially caused issues with checking the correct answer. This was solved by comparing the selected button text with the correct answer string, rather than relying on fixed indexes.
+Randomising answer options initially caused issues with checking the correct answer, as relying on fixed indexes was no longer reliable. This was solved by comparing the selected button text with the correct answer string, ensuring accurate validation regardless of the answer order.
 
 ### Feedback Display Issues
 At an early stage, feedback messages were not displaying correctly and sometimes returned undefined values. This was resolved by ensuring that every question included an explanation property and by maintaining consistent data structure across all questions.
 
 ### Styling and Responsiveness
-Ensuring the quiz looked clean and usable on smaller screens required adjustments to spacing, font sizes, and button layout. Media queries and flexible container widths were used to improve responsiveness across devices.
+Ensuring the quiz remained clean, readable, and usable on smaller screens required adjustments to spacing, font sizes, and button layout. Media queries and flexible container widths were used to improve responsiveness and provide a consistent experience across devices.
 
 ## Deployment
 The project is deployed using **GitHub Pages**.
