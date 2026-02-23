@@ -119,14 +119,16 @@ At an early stage, feedback messages were not displaying correctly and sometimes
 Ensuring the quiz remained clean, readable, and usable on smaller screens required adjustments to spacing, font sizes, and button layout. Media queries and flexible container widths were used to improve responsiveness and provide a consistent experience across devices.
 
 ## Deployment
-The project is deployed using **GitHub Pages**.
+This project was deployed using **GitHub Pages**.
 
+### Live Site
+👉 https://vera-com.github.io/english-grammar-quiz/
 
 ### Deployment Steps
-1. Push the project to a GitHub repository  
-2. Navigate to **Settings → Pages**  
-3. Select the main branch as the source  
-4. Save to generate the live deployment link  
+1. Push the project to a GitHub repository
+2. Navigate to **Settings → Pages**
+3. Select the `main` branch and `/ (root)` folder
+4. Save to generate the live deployment link
 
 ---
 
