@@ -131,7 +131,13 @@ The project is deployed using **GitHub Pages**.
 ---
 
 ## UX & Design Reflection
-The user interface was designed to be clean, minimal, and intuitive. Clear typography, consistent spacing, and large buttons ensure ease of use across devices. Immediate feedback and grammar explanations help users understand mistakes rather than simply identifying correct or incorrect answers. The linear quiz flow reduces cognitive load and keeps users focused on the learning task.
+The user interface is designed to be clean, minimal, and intuitive, with a strong focus on usability rather than visual complexity. Clear typography, consistent spacing, and large buttons were chosen to ensure ease of use across different devices.
+
+Immediate feedback and short grammar explanations were included to help users understand *why* an answer is correct or incorrect, rather than simply showing the result. This supports learning and encourages users to reflect on their mistakes.
+
+I chose a linear quiz flow to reduce cognitive load and keep users focused on one task at a time. A simple, high-contrast, letter-based favicon was also included to improve tab recognition and maintain visual consistency with my previous projects.
+
+Overall, my design decisions prioritise clarity, readability, and ease of use, ensuring the quiz remains accessible and engaging without unnecessary distraction.
 
 ---
 
