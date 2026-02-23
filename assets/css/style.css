@@ -101,7 +101,7 @@ button:focus {
   background-color: #15803d !important;
   box-shadow: 0 0 0 3px rgba(21,128,61,0.5);
   color: white;
-  transform: scale(1.02);
+
 }
 
 .answer-btn.wrong {
