@@ -101,7 +101,8 @@ This included:
 - Testing quiz flow from start to completion  
 - Checking responsiveness across different screen sizes  
 
-Any issues identified were resolved and retested.
+Any issues identified during testing were resolved and retested.
+Detailed manual testing is documented in the [test.md](test.md) file.
 
 ---
 ## Challenges Faced & Solutions
