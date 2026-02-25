@@ -64,7 +64,7 @@ const questions = [
     "This is a unique idea."
   ],
   correct: "This is a unique idea.",
-  explanation: "'Unique' is an absolute adjective, so we do not use 'more' or 'most' with it."
+  explanation: "'Unique' is an <em>absolute adjective</em>, so we do not use 'more' or 'most' with it."
 },
 
 {
@@ -179,9 +179,9 @@ answerButtons.forEach(button => {
 
 if (button.textContent === correctAnswer) {
   score++;
-  feedbackMessage.textContent = `Correct! 🎉 ${explanation}`;
+  feedbackMessage.innerHTML = `<strong>Correct! 🎉</strong> ${explanation}`;
 } else {
-  feedbackMessage.textContent = `Not quite 🙂 ${explanation}`;
+  feedbackMessage.innerHTML = `<strong>Not quite 🙂</strong> ${explanation}`;
   button.classList.add("wrong");
 }
     // Always highlight the correct answer
