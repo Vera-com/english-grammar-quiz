@@ -9,7 +9,7 @@ const questions = [
       "She didn't likes coffee."
     ],
     correct: "She doesn't like coffee.",
-    explanation: "'Neither' is singular, so it takes a singular verb: 'was', not 'were'."
+    explanation: "With the subject <em>'she'</em> we use <em>'doesn't'</em> in the present simple, not <em>'dont'</em>."
   },
   {
     question: "Choose the correct sentence:",
@@ -19,7 +19,7 @@ const questions = [
       "They is happy."
     ],
     correct: "They were happy.",
-    explanation: "With the subject 'they', we use 'were' in the past simple, not 'was' or 'is'."
+    explanation: "With the subject <em>'they'</em>, we use <em>'were'</em> in the <em>past simple</em>, not <em>'was'</em> or <em>'is'</em>."
   },
 
   {
@@ -30,7 +30,7 @@ const questions = [
     "will live"
   ],
   correct: "would live",
-  explanation: "This is a mixed conditional: the 'if' clause refers to a past situation, but the result refers to the present."
+  explanation: "This is a <em>mixed conditional</em>: the <em>'if' clause refers to a past situation</em>, but the <em>result refers to the present</em>."
 },
 
 {
@@ -52,7 +52,7 @@ const questions = [
     "I saw"
   ],
   correct: "have I seen",
-  explanation: "After negative adverbs like 'rarely', we invert the subject and auxiliary."
+  explanation: "After <em>negative adverbs</em> like <em>'rarely'</em>, we <em>invert the subject and auxiliary</em>."
 
 },
 
@@ -64,7 +64,7 @@ const questions = [
     "This is a unique idea."
   ],
   correct: "This is a unique idea.",
-  explanation: "'Unique' is an <em>absolute adjective</em>, so we do not use 'more' or 'most' with it."
+  explanation: "<em>'Unique'</em> is an <em>absolute adjective</em>, so we do not use <em>'more'</em> or <em>'most'</em> with it."
 },
 
 {
@@ -75,7 +75,7 @@ const questions = [
     "cannot see"
   ],
   correct: "might not have seen",
-  explanation: "'Might not have' is used to make a guess about a past situation with uncertainty."
+  explanation: "<em>'Might not have'</em> is used to make a <em>guess about a past situation</em> with <em>uncertainty</em>."
 },
 
 {
@@ -86,7 +86,7 @@ const questions = [
     "he is"
   ],
   correct: "was he",
-  explanation: "After 'not only' at the beginning of a sentence, we use inversion with the auxiliary verb."
+  explanation: "After <em>'not only'</em> at the beginning of a sentence, we use <em>inversion</em> with the <em>auxiliary verb</em>."
 },
 
 {
@@ -97,7 +97,7 @@ const questions = [
     "will pass"
   ],
   correct: "would pass",
-  explanation: "This is a mixed conditional: a past condition with a present result."
+  explanation: "This is a <em>mixed conditional</em>: a <em>past condition</em> with a <em>present result</em>."
 },
 
 {
@@ -108,7 +108,7 @@ const questions = [
     "Neither of the students are ready."
   ],
   correct: "Neither of the students was ready.",
-  explanation: "'Neither' is singular, so it takes a singular verb: 'was', not 'were'."
+  explanation: "<em>'Neither'</em> is <em>singular</em>, so it takes a <em>singular verb: 'was'</em>, not '<em>were'</em>."
 }
 
 ];
