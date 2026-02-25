@@ -135,11 +135,33 @@ This project was deployed using **GitHub Pages**.
 ## UX & Design Reflection
 The user interface is designed to be clean, minimal, and intuitive, with a strong focus on usability rather than visual complexity. Clear typography, consistent spacing, and large buttons were chosen to ensure ease of use across different devices.
 
-Immediate feedback and short grammar explanations were included to help users understand *why* an answer is correct or incorrect, rather than simply showing the result. This supports learning and encourages users to reflect on their mistakes.
+Immediate feedback and short grammar explanations were included to help users understand why an answer is correct or incorrect, rather than just showing whether they are right or wrong. This supports learning and encourages users to reflect on their mistakes.
 
 I chose a linear quiz flow to reduce cognitive load and keep users focused on one task at a time. A simple, high-contrast, letter-based favicon was also included to improve tab recognition and maintain visual consistency with my previous projects.
 
-Overall, my design decisions prioritise clarity, readability, and ease of use, ensuring the quiz remains accessible and engaging without unnecessary distraction.
+Overall, my design decisions prioritise clarity, readability, and ease of use, helping to keep the quiz accessible and engaging without unnecessary distraction.
+
+### Visual Design & Colour Scheme
+
+A soft, neutral container background was used to keep the focus on the quiz content, while a darker gradient background helps the quiz stand out visually on the page.
+
+Colour is also used to provide clear feedback:
+- **Blue** for neutral and unselected answer options
+- **Green** to indicate correct answers
+- **Orange** to indicate incorrect answers
+
+This colour scheme was chosen to support quick visual recognition, improve usability, and maintain sufficient contrast for accessibility.
+
+### Typography
+
+A clean sans-serif font was used throughout the project to ensure readability across different screen sizes and devices.
+
+Font sizes and spacing were adjusted to:
+- Make questions easy to scan
+- Ensure buttons are clearly readable and tappable
+- Maintain a clear visual hierarchy between headings, questions, and feedback messages
+
+These choices support accessibility and help reduce cognitive load during the quiz.
 
 ---
 
