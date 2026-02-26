@@ -41,7 +41,7 @@ const questions = [
     "I live here since 2020."
   ],
   correct: "I have lived here since 2020.",
-  explanation: "We use the present perfect with 'since' to describe an action that started in the past and continues now."
+  explanation: "We use the <em>present perfect</em> with <em>'since'</em> to describe an action that started in the past and continues now."
 },
 
 {
