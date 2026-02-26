@@ -1,6 +1,6 @@
 # Testing
 
-Testing was carried out manually throughout development to ensure functionality, usability, and responsiveness across different devices and screen sizes.
+This document (test.md) outlines the manual testing, validation, and responsiveness checks that were carried out for the Interactive English Grammar Quiz.
 
 ---
 
@@ -32,13 +32,24 @@ Testing was carried out manually throughout development to ensure functionality,
 
 ---
 
-### Responsiveness
+## Responsiveness Testing
 
-| Device / Screen Size | Expected Outcome | Result |
-|---------------------|------------------|--------|
-| Desktop | Layout remains centred and readable | Pass |
-| Tablet | Buttons resize appropriately | Pass |
-| Mobile | Content fits screen without horizontal scrolling | Pass |
+The application was tested on multiple screen sizes using Chrome DevTools and Am I Responsive.
+
+![Am I Responsive Screenshot](docs/responsiveness/ami-responsive.png)
+
+## Lighthouse Testing
+
+Lighthouse audits were run in Incognito mode to avoid extension interference.
+
+- Performance: 90–100
+- Accessibility: 90+
+- Best Practices: 100
+- SEO: 100
+
+![Lighthouse Results](docs/responsiveness/lighthouse-validation-1.png)
+![Lighthouse Results](docs/responsiveness/lighthouse-validation-2.png)
+
 
 ---
 
@@ -77,7 +88,22 @@ Testing was carried out manually throughout development to ensure functionality,
 
 ## Validation
 
-- HTML validated using W3C Validator
-- CSS validated using W3C CSS Validator
-- JavaScript tested manually through browser developer tools
+### HTML Validation
+- Tool: W3C HTML Validator
+- Result: No errors or warnings after semantic heading fixes
+
+![HTML Validation Screenshot](docs/validation/w3w-html.png)
+
+### CSS Validation
+- Tool: W3C CSS Validator
+- Result: No errors found
+- Warnings relate to vendor-prefixed properties added by Autoprefixer, which is expected
+
+![CSS Validation Screenshot](docs/validation/w3w-css.png)
+
+### Autoprefixer
+- Tool: Autoprefixer CSS Online
+- Purpose: Improve cross-browser compatibility by adding vendor prefixes
+
+![Autoprefixer Screenshot](docs/validation/autprefixer-css.png)
 

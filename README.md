@@ -12,7 +12,7 @@
 - [Challenges Faced & Solutions](#challenges-faced--solutions)
 - [Deployment](#deployment)
 - [UX & Design Reflection](#ux--design-reflection)
-- [Why This Project Works](#why-this-project-works-assessment-summary)
+- [Alignment with Assessment Requirements](#alignment-with-assessment-requirements)
 - [Credits](#credits)
 ...
 
@@ -92,18 +92,51 @@ This project focuses on **JavaScript interactivity, DOM manipulation, and user e
 ---
 
 ## Testing
-Testing was carried out continuously throughout development to ensure functionality and usability.
 
-This included:
-- Verifying correct answer selection and score updates  
-- Ensuring only one answer can be selected per question  
-- Confirming feedback messages and explanations display correctly  
-- Testing quiz flow from start to completion  
-- Checking responsiveness across different screen sizes  
+Testing was carried out throughout development to ensure functionality, usability, accessibility, and responsiveness.
 
-Any issues identified during testing were resolved and retested.
+### Manual Testing
+All quiz functionality was tested manually, including:
+- Start quiz and navigation between questions
+- Single-answer selection per question
+- Correct and incorrect answer feedback with explanations
+- Score tracking and final results display
+- Restart quiz functionality
+
 Detailed manual testing is documented in the [test.md](test.md) file.
 
+### Validation
+
+The project was validated using the following tools:
+
+- **HTML Validation**:  
+  HTML was validated using the W3C HTML Validator with no errors reported.  
+  ![HTML Validation](docs/validation/w3w-html.png)
+
+- **CSS Validation**:  
+  CSS was validated using the W3C CSS Validator. Vendor prefix warnings are present due to Autoprefixer usage.
+  ![CSS Validation](docs/validation/w3w-css.png)
+
+- **Autoprefixer**:  
+  Autoprefixer was used to add vendor prefixes for improved cross-browser compatibility.  
+  ![Autoprefixer Output](docs/validation/autprefixer-css.png)
+
+### Responsiveness
+
+The site was tested across multiple screen sizes using Chrome DevTools and the Am I Responsive tool.
+
+![Am I Responsive Screenshot](docs/responsiveness/ami-responsive.png)
+
+### Lighthouse Testing
+
+Lighthouse audits were run in Incognito mode to ensure accurate performance results.  
+The site achieved scores above 90 in all categories.
+
+![Lighthouse Results](docs/responsiveness/lighthouse-validation-1.png)
+![Lighthouse Results](docs/responsiveness/lighthouse-validation-2.png)
+
+
+Any issues identified during testing were resolved and retested.
 ---
 ## Challenges Faced & Solutions
 
@@ -118,6 +151,23 @@ At an early stage, feedback messages were not displaying correctly and sometimes
 
 ### Styling and Responsiveness
 Ensuring the quiz remained clean, readable, and usable on smaller screens required adjustments to spacing, font sizes, and button layout. Media queries and flexible container widths were used to improve responsiveness and provide a consistent experience across devices.
+
+### HTML Semantic Structure Warnings
+During HTML validation, warnings were raised indicating that some `<section>` elements lacked appropriate heading content. This could affect accessibility and document structure.
+
+**Fix:**  
+Semantic headings were added to each section, and where headings were not intended to be visually displayed, a visually-hidden utility class was applied. This ensured the document remained accessible to screen readers while maintaining the intended visual layout.
+
+**Status:** Resolved
+
+### Lighthouse Performance Variance During Testing
+Initial Lighthouse performance scores were inconsistent when tested in a standard browser session due to multiple open tabs and active extensions affecting results.
+
+**Fix:**  
+Lighthouse audits were rerun in Incognito mode to eliminate extension interference and background processes, producing more accurate and reliable performance results.
+
+**Status:** Resolved
+
 
 ## Deployment
 This project was deployed using **GitHub Pages**.
@@ -164,13 +214,26 @@ Font sizes and spacing were adjusted to:
 
 These choices support accessibility and help reduce cognitive load during the quiz.
 
+### Wireframes / Initial Sketch
+
+Initial layout planning was done using a simple hand-drawn sketch to define the structure and user flow of the application before development began.
+
+![Initial Design Sketch](docs/wireframes/drawing-sketch.png)
+
+
 ---
 
-## Why This Project Works (Assessment Summary)
-This project successfully meets the MS2 requirements by combining structured JavaScript logic with meaningful user interaction. The application manages state effectively, restricts user input appropriately, and provides immediate feedback to enhance learning. Clear UX decisions, accessibility considerations, and a responsive layout ensure the quiz is usable and engaging. Overall, the project demonstrates a solid understanding of front-end development fundamentals and practical JavaScript implementation.
+## Alignment with Assessment Requirements
+This project was developed with the Milestone Project 2 requirements in mind, focusing on JavaScript-driven interactivity and clear user engagement. The quiz logic is designed to manage state effectively, guide users through a structured flow, and restrict inputs where appropriate to avoid unintended behaviour.
+
+Accessibility and usability were considered throughout development, with attention given to colour contrast, clear feedback, and responsive layout across different devices. Immediate feedback and short grammar explanations were included to support learning rather than simply indicating right or wrong answers.
+
+Overall, this project reflects my current understanding of front-end development concepts introduced in the course, particularly DOM manipulation, event handling, and user-focused design.
+
 
 ---
 
 ## Credits
 - Code Institute course materials  
-- Mentor and facilitator guidance
+- Code Institute MS1 & MS2 student webinar sessions
+- Online documentation and references (MDN Web Docs)
